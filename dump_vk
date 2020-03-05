@@ -1,0 +1,321 @@
+-- MySQL dump 10.13  Distrib 8.0.19, for Linux (x86_64)
+--
+-- Host: localhost    Database: exemple_vk
+-- ------------------------------------------------------
+-- Server version	8.0.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `citys`
+--
+
+DROP TABLE IF EXISTS `citys`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `citys` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `postcode` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `citys`
+--
+
+LOCK TABLES `citys` WRITE;
+/*!40000 ALTER TABLE `citys` DISABLE KEYS */;
+INSERT INTO `citys` VALUES (1,'Lake Effiechester',45565),(2,'South Augustus',80295),(3,'Hermannchester',43116),(4,'Port Amelieton',8511),(5,'East Kirstin',52399),(6,'East Kenna',27578),(7,'West Maud',11563),(8,'East Abbie',36956),(9,'Lake Lessieville',15168),(10,'Avaburgh',91857),(11,'Bradyview',49001),(12,'Koeppburgh',98077),(13,'Ebonyshire',15269),(14,'Federicotown',172),(15,'Romagueramouth',67889),(16,'South Rey',50531),(17,'Lake Carolanne',53328),(18,'West Otilia',1648),(19,'Goyetteborough',88408),(20,'East Wilton',25698),(21,'Millerport',20133),(22,'Tessside',451),(23,'Leannonshire',63580),(24,'Lake Wileyhaven',84729),(25,'Mckaylaport',20583),(26,'North Harveyberg',31269),(27,'West Ezequielmouth',90800),(28,'Colbyville',12269),(29,'East Brielle',65191),(30,'New Amparoland',97821),(31,'North Margaretport',68211),(32,'Bednarton',90541),(33,'Brekkeshire',85442),(34,'Kathleenside',40734),(35,'Pacochaborough',40106),(36,'New Abigayleshire',75539),(37,'Lake Flossiemouth',94110),(38,'Faychester',82634),(39,'Cummingsmouth',64212),(40,'East Reggie',76868),(41,'New Henrimouth',56866),(42,'Vandervortshire',56489),(43,'West Tiffany',90031),(44,'New Landen',82487),(45,'East Stantown',84227),(46,'Watsicaton',34735),(47,'Lawrenceton',70539),(48,'Lake Lorenza',2433),(49,'West Cortneymouth',93584),(50,'Stoltenbergville',5169),(51,'Heidenreichfort',85628),(52,'Pagacborough',63718),(53,'Port Zulaville',75661),(54,'Waelchiton',13618),(55,'Brendonberg',66288),(56,'North Geneton',18157),(57,'Christiansenville',52889),(58,'New Cedrick',2928),(59,'East Nikita',2991),(60,'Edmundport',38843),(61,'New Jaylen',77165),(62,'East Kellie',17587),(63,'Windlershire',21593),(64,'Leannaport',84415),(65,'West Freidaberg',98183),(66,'Lake Yoshiko',4969),(67,'Schroederbury',39599),(68,'East Ashtynland',82143),(69,'South Lue',67645),(70,'South Dessie',66250),(71,'West Hudson',41686),(72,'East Warren',72436),(73,'Tedborough',83954),(74,'Yundtberg',57876),(75,'Odaview',31963),(76,'Macietown',4204),(77,'Walkerview',97368),(78,'South Sean',46845),(79,'North Lois',61271),(80,'Wunschshire',70883),(81,'New Gaetano',60843),(82,'West Raymundo',37710),(83,'East Claraville',60044),(84,'Ryanbury',92134),(85,'Annamariehaven',57400),(86,'South Major',26398),(87,'Schimmeltown',53032),(88,'South Pierce',49079),(89,'Kulasmouth',31736),(90,'Dariushaven',50699),(91,'South Johnniefort',50354),(92,'Lake Josefaburgh',21170),(93,'Lynchberg',66735),(94,'South Karianeshire',8509),(95,'Kesslershire',13699),(96,'West Milobury',31077),(97,'West Janis',89445),(98,'South Darian',59543),(99,'West Malikahaven',54733),(100,'West Rebeccashire',6738);
+/*!40000 ALTER TABLE `citys` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `communities`
+--
+
+DROP TABLE IF EXISTS `communities`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `communities` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `communities`
+--
+
+LOCK TABLES `communities` WRITE;
+/*!40000 ALTER TABLE `communities` DISABLE KEYS */;
+INSERT INTO `communities` VALUES (23,'Bartell, Bogan and Larson'),(18,'Bauch Ltd'),(13,'Collier-Mraz'),(16,'Corkery, Bayer and Upton'),(10,'Crist, Okuneva and Ankunding'),(14,'Crooks, Reinger and Roob'),(4,'Effertz, Considine and Schuppe'),(1,'Gerhold LLC'),(15,'Gottlieb Ltd'),(6,'Goyette PLC'),(20,'Heathcote and Sons'),(24,'Hettinger, Mayert and Leuschke'),(9,'Hodkiewicz LLC'),(22,'Howell, Rice and Walsh'),(3,'Johns-Wolff'),(25,'Keeling PLC'),(7,'Kessler Inc'),(17,'McClure, Waelchi and Jast'),(19,'Prosacco Inc'),(5,'Reilly-Cummerata'),(2,'Schaefer-Labadie'),(11,'Schmeler-Hodkiewicz'),(21,'Stiedemann, Metz and Schneider'),(12,'Wehner and Sons'),(8,'Ziemann-Bauch');
+/*!40000 ALTER TABLE `communities` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `communities_users`
+--
+
+DROP TABLE IF EXISTS `communities_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `communities_users` (
+  `community_id` int unsigned NOT NULL,
+  `user_id` int unsigned NOT NULL,
+  PRIMARY KEY (`community_id`,`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `communities_users`
+--
+
+LOCK TABLES `communities_users` WRITE;
+/*!40000 ALTER TABLE `communities_users` DISABLE KEYS */;
+INSERT INTO `communities_users` VALUES (1,1),(1,26),(1,51),(1,76),(2,2),(2,27),(2,52),(2,77),(3,3),(3,28),(3,53),(3,78),(4,4),(4,29),(4,54),(4,79),(5,5),(5,30),(5,55),(5,80),(6,6),(6,31),(6,56),(6,81),(7,7),(7,32),(7,57),(7,82),(8,8),(8,33),(8,58),(8,83),(9,9),(9,34),(9,59),(9,84),(10,10),(10,35),(10,60),(10,85),(11,11),(11,36),(11,61),(11,86),(12,12),(12,37),(12,62),(12,87),(13,13),(13,38),(13,63),(13,88),(14,14),(14,39),(14,64),(14,89),(15,15),(15,40),(15,65),(15,90),(16,16),(16,41),(16,66),(16,91),(17,17),(17,42),(17,67),(17,92),(18,18),(18,43),(18,68),(18,93),(19,19),(19,44),(19,69),(19,94),(20,20),(20,45),(20,70),(20,95),(21,21),(21,46),(21,71),(21,96),(22,22),(22,47),(22,72),(22,97),(23,23),(23,48),(23,73),(23,98),(24,24),(24,49),(24,74),(24,99),(25,25),(25,50),(25,75),(25,100);
+/*!40000 ALTER TABLE `communities_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `country`
+--
+
+DROP TABLE IF EXISTS `country`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `country` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `country` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `country` (`country`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `country`
+--
+
+LOCK TABLES `country` WRITE;
+/*!40000 ALTER TABLE `country` DISABLE KEYS */;
+INSERT INTO `country` VALUES (15,'Afghanistan'),(18,'Albania'),(22,'Antarctica (the territory South of 60 deg S)'),(17,'Antigua and Barbuda'),(80,'Armenia'),(93,'Austria'),(92,'Azerbaijan'),(48,'Bahamas'),(9,'Belarus'),(41,'Belgium'),(53,'Belize'),(91,'Benin'),(42,'Bermuda'),(37,'Bosnia and Herzegovina'),(7,'Bouvet Island (Bouvetoya)'),(34,'Brazil'),(13,'Burkina Faso'),(51,'Cameroon'),(20,'Canada'),(38,'Cape Verde'),(2,'Central African Republic'),(31,'Chad'),(66,'Chile'),(70,'China'),(55,'Christmas Island'),(14,'Cocos (Keeling) Islands'),(49,'Comoros'),(86,'Congo'),(64,'Costa Rica'),(59,'Croatia'),(87,'Czech Republic'),(52,'Denmark'),(89,'Dominica'),(57,'Dominican Republic'),(76,'Ecuador'),(77,'Egypt'),(85,'Equatorial Guinea'),(39,'Ethiopia'),(26,'Faroe Islands'),(43,'French Guiana'),(83,'Gabon'),(54,'Gambia'),(6,'Greece'),(88,'Greenland'),(75,'Guadeloupe'),(32,'Guernsey'),(40,'Guinea'),(21,'Heard Island and McDonald Islands'),(62,'Honduras'),(94,'Hong Kong'),(33,'Indonesia'),(3,'Italy'),(25,'Jersey'),(27,'Kazakhstan'),(44,'Lao People\'s Democratic Republic'),(69,'Lesotho'),(11,'Luxembourg'),(68,'Malawi'),(35,'Malaysia'),(95,'Marshall Islands'),(84,'Mauritania'),(8,'Mayotte'),(63,'Micronesia'),(16,'Moldova'),(10,'Mozambique'),(67,'Nepal'),(23,'Netherlands'),(4,'Nicaragua'),(58,'Nigeria'),(61,'Niue'),(100,'Northern Mariana Islands'),(82,'Pakistan'),(73,'Palau'),(50,'Palestinian Territory'),(1,'Philippines'),(98,'Poland'),(71,'Qatar'),(46,'Romania'),(60,'Russian Federation'),(56,'Saint Barthelemy'),(96,'Saint Helena'),(97,'Saint Pierre and Miquelon'),(45,'Saint Vincent and the Grenadines'),(99,'Sao Tome and Principe'),(19,'Saudi Arabia'),(65,'Senegal'),(36,'Seychelles'),(90,'Sierra Leone'),(28,'Singapore'),(12,'Taiwan'),(47,'Thailand'),(24,'Tokelau'),(74,'Turkmenistan'),(29,'Turks and Caicos Islands'),(72,'United Kingdom'),(78,'Uruguay'),(79,'Vanuatu'),(81,'Western Sahara'),(5,'Yemen'),(30,'Zambia');
+/*!40000 ALTER TABLE `country` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `friendship`
+--
+
+DROP TABLE IF EXISTS `friendship`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `friendship` (
+  `user_id` int unsigned NOT NULL,
+  `friend_id` int unsigned NOT NULL,
+  `status_id` int unsigned NOT NULL,
+  `requested_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `confirmed_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`user_id`,`friend_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `friendship`
+--
+
+LOCK TABLES `friendship` WRITE;
+/*!40000 ALTER TABLE `friendship` DISABLE KEYS */;
+INSERT INTO `friendship` VALUES (1,1,0,'2017-01-03 08:57:56','2006-09-03 23:51:15'),(2,2,0,'1988-09-10 08:30:58','2016-06-18 02:40:52'),(3,3,0,'2013-01-24 15:07:12','1993-10-01 23:43:30'),(4,4,0,'2010-08-12 20:33:37','2011-12-13 10:40:52'),(5,5,0,'1998-09-11 19:42:54','1971-12-17 23:10:12'),(6,6,0,'2019-06-28 23:29:37','1998-02-20 02:12:53'),(7,7,0,'1970-12-02 10:57:53','1972-12-28 13:36:26'),(8,8,0,'2012-10-08 15:28:40','1972-02-23 14:30:09'),(9,9,0,'2010-01-24 01:42:59','1992-08-14 15:18:17'),(10,10,0,'2017-11-24 07:21:18','1985-11-03 07:15:27'),(11,11,0,'1978-01-10 08:58:52','1998-04-17 03:32:33'),(12,12,0,'1972-05-31 11:23:38','2013-06-10 14:20:59'),(13,13,0,'2011-08-10 21:27:39','1997-08-09 16:16:27'),(14,14,0,'1994-05-08 03:25:34','1990-06-22 05:38:36'),(15,15,0,'1983-03-07 03:06:17','2015-11-07 02:40:35'),(16,16,0,'1974-07-20 07:37:34','1975-03-09 17:20:38'),(17,17,0,'1977-09-09 05:01:29','1983-05-21 07:02:57'),(18,18,0,'1988-09-13 13:06:05','2006-04-20 02:47:15'),(19,19,0,'2018-07-31 14:05:46','1996-11-20 07:31:29'),(20,20,0,'1973-02-03 08:17:11','1995-04-03 09:52:05'),(21,21,0,'1984-04-25 00:37:28','2008-11-15 03:52:22'),(22,22,0,'2007-07-12 14:27:23','1994-12-07 14:38:08'),(23,23,0,'1994-06-02 15:54:52','1980-04-23 04:22:34'),(24,24,0,'2004-10-30 05:02:30','2002-11-19 20:52:19'),(25,25,0,'2012-09-20 05:32:00','2006-11-30 10:35:33'),(26,26,0,'2000-02-18 12:22:46','1989-10-02 05:54:55'),(27,27,0,'1998-02-28 20:10:39','2017-03-03 22:09:23'),(28,28,0,'2008-01-16 19:31:23','2000-06-08 18:27:05'),(29,29,0,'1976-12-24 17:18:32','2000-08-31 00:42:12'),(30,30,0,'2012-08-11 03:15:28','2011-12-12 20:01:08'),(31,31,0,'1987-07-04 19:27:23','1976-07-06 06:32:04'),(32,32,0,'1974-03-07 05:53:11','1982-01-24 05:23:06'),(33,33,0,'2004-02-22 14:59:23','1974-07-15 15:20:48'),(34,34,0,'1984-02-15 12:45:39','1982-10-05 15:11:57'),(35,35,0,'2005-07-28 23:31:06','1980-07-23 23:47:18'),(36,36,0,'1971-09-09 15:47:05','1974-10-02 06:42:47'),(37,37,0,'2007-03-09 01:56:23','2006-11-13 08:02:36'),(38,38,0,'2018-10-21 01:15:07','2005-01-28 16:10:02'),(39,39,0,'1979-10-15 14:28:00','2008-11-29 16:00:21'),(40,40,0,'1981-06-21 19:29:42','1983-05-07 08:22:44'),(41,41,0,'1971-08-15 13:46:42','2007-04-29 15:19:54'),(42,42,0,'2010-01-01 08:44:00','1971-11-24 16:56:26'),(43,43,0,'1976-01-15 08:36:19','1987-08-17 03:43:47'),(44,44,0,'1991-12-14 09:34:10','2010-07-25 12:03:05'),(45,45,0,'1986-01-26 02:49:28','1993-01-24 06:12:10'),(46,46,0,'1975-02-25 19:03:16','1982-07-24 15:36:10'),(47,47,0,'2018-11-07 01:00:25','1978-05-01 22:09:47'),(48,48,0,'1988-02-19 02:57:26','1986-10-05 04:21:07'),(49,49,0,'2006-06-22 09:27:36','2002-06-06 16:23:19'),(50,50,0,'2001-01-18 21:13:58','2000-03-08 00:30:27'),(51,51,0,'1980-06-15 17:32:32','1986-09-07 03:07:31'),(52,52,0,'2003-11-29 13:22:47','2020-01-11 08:41:11'),(53,53,0,'1976-09-13 03:48:59','1972-02-28 22:11:34'),(54,54,0,'2010-12-02 18:35:44','1976-01-08 01:09:51'),(55,55,0,'1979-03-03 00:30:50','1972-06-21 17:21:07'),(56,56,0,'1994-12-24 07:18:13','2007-02-22 20:24:31'),(57,57,0,'2014-04-04 02:11:30','2007-02-20 12:30:09'),(58,58,0,'2004-12-26 11:59:48','1988-02-15 12:21:35'),(59,59,0,'2002-03-31 10:02:31','2014-04-24 03:24:45'),(60,60,0,'1991-07-13 16:02:33','1985-03-17 21:25:36'),(61,61,0,'1982-09-18 19:07:12','2016-08-05 07:34:20'),(62,62,0,'2013-04-07 05:51:24','2011-08-29 19:40:01'),(63,63,0,'2005-04-22 18:10:06','2003-03-04 08:54:33'),(64,64,0,'1990-12-01 15:49:36','2016-10-28 07:56:35'),(65,65,0,'1999-11-27 07:30:03','1997-04-11 10:16:43'),(66,66,0,'1981-11-01 23:42:20','2003-10-13 10:04:00'),(67,67,0,'2007-03-30 15:41:00','1991-04-09 07:54:10'),(68,68,0,'1974-07-06 05:12:17','1999-01-02 13:02:43'),(69,69,0,'1978-03-07 07:22:46','1970-06-01 02:22:14'),(70,70,0,'2009-06-24 09:23:03','1972-08-23 17:45:27'),(71,71,0,'1978-08-07 05:06:51','2013-03-17 17:25:20'),(72,72,0,'2006-02-01 21:19:44','1984-01-01 06:29:51'),(73,73,0,'1998-04-11 17:52:02','1985-10-15 11:55:42'),(74,74,0,'2010-03-17 05:44:14','2001-07-30 06:03:00'),(75,75,0,'2011-09-08 17:09:38','2012-09-10 11:10:38'),(76,76,0,'2010-11-30 22:26:48','1987-02-25 23:27:37'),(77,77,0,'2001-12-28 23:13:33','1971-02-09 23:53:50'),(78,78,0,'1970-01-20 06:23:14','1993-05-04 11:31:35'),(79,79,0,'2004-08-30 02:43:55','1977-09-06 12:34:16'),(80,80,0,'1996-02-17 21:35:05','1980-07-13 21:57:11'),(81,81,0,'1998-01-14 15:26:22','2019-11-20 05:48:43'),(82,82,0,'1982-04-28 11:17:19','1983-12-29 04:03:29'),(83,83,0,'1971-11-14 17:18:15','2007-08-16 11:13:39'),(84,84,0,'2011-07-30 13:30:16','1994-09-30 03:53:21'),(85,85,0,'2018-04-14 11:30:58','2005-08-28 02:01:33'),(86,86,0,'1971-03-19 21:27:51','2010-09-09 16:35:27'),(87,87,0,'1993-03-26 08:49:34','1975-06-09 05:27:53'),(88,88,0,'2000-11-18 07:17:48','2007-01-25 15:28:12'),(89,89,0,'2005-07-24 20:55:49','2001-04-11 18:25:39'),(90,90,0,'1983-02-27 02:13:39','1993-09-19 15:27:15'),(91,91,0,'2010-01-19 14:23:18','1988-08-05 11:16:27'),(92,92,0,'1974-11-13 16:00:50','1972-10-10 18:39:39'),(93,93,0,'1981-07-16 19:09:51','1985-12-24 20:06:08'),(94,94,0,'2004-06-21 16:07:03','2008-04-14 10:13:38'),(95,95,0,'2002-11-13 10:03:17','1992-08-02 05:32:08'),(96,96,0,'2012-08-04 02:11:53','2019-05-23 12:30:09'),(97,97,0,'1998-02-03 13:08:39','1992-12-09 19:18:22'),(98,98,0,'1984-02-02 14:14:22','1983-08-08 02:30:51'),(99,99,0,'2005-07-19 20:24:42','2008-07-19 05:12:57'),(100,100,0,'2013-09-29 18:01:01','2017-11-09 20:00:42');
+/*!40000 ALTER TABLE `friendship` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `friendship_statuses`
+--
+
+DROP TABLE IF EXISTS `friendship_statuses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `friendship_statuses` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `friendship_statuses`
+--
+
+LOCK TABLES `friendship_statuses` WRITE;
+/*!40000 ALTER TABLE `friendship_statuses` DISABLE KEYS */;
+INSERT INTO `friendship_statuses` VALUES (1,'confirmed'),(3,'not confirmed'),(2,'request');
+/*!40000 ALTER TABLE `friendship_statuses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `media`
+--
+
+DROP TABLE IF EXISTS `media`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `media` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `media_type_id` int unsigned NOT NULL,
+  `user_id` int unsigned NOT NULL,
+  `filename` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `size` int NOT NULL,
+  `metadata` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `media`
+--
+
+LOCK TABLES `media` WRITE;
+/*!40000 ALTER TABLE `media` DISABLE KEYS */;
+INSERT INTO `media` VALUES (1,5,1,'qui',93591276,NULL,'2020-01-23 07:28:00','2020-02-18 02:48:23'),(2,5,2,'occaecati',2,NULL,'2019-04-29 20:52:19','2020-02-24 18:50:31'),(3,5,3,'velit',42,NULL,'2019-12-12 18:05:23','2020-02-04 11:23:49'),(4,5,4,'delectus',78499,NULL,'2020-01-29 22:19:02','2020-02-28 16:16:30'),(5,5,5,'ad',6,NULL,'2019-11-02 07:52:39','2020-02-10 08:47:43'),(6,5,6,'quia',73643443,NULL,'2019-04-19 04:10:02','2020-02-13 00:45:37'),(7,5,7,'rerum',0,NULL,'2019-05-26 01:49:10','2020-02-15 20:26:02'),(8,5,8,'odio',94,NULL,'2019-04-16 10:37:18','2020-02-24 22:00:06'),(9,5,9,'magnam',0,NULL,'2019-12-02 16:20:31','2020-02-19 11:24:00'),(10,5,10,'corrupti',394910313,NULL,'2020-03-01 02:14:11','2020-02-12 05:41:30'),(11,5,11,'totam',5486347,NULL,'2019-10-23 09:36:47','2020-02-11 22:45:41'),(12,5,12,'ullam',37811709,NULL,'2019-10-10 06:18:31','2020-02-25 08:01:24'),(13,5,13,'officia',421652,NULL,'2019-08-21 21:16:46','2020-02-15 22:15:35'),(14,5,14,'officia',509909,NULL,'2019-12-20 15:39:36','2020-02-21 18:25:28'),(15,5,15,'rem',809,NULL,'2019-10-31 15:30:12','2020-02-25 19:41:57'),(16,5,16,'voluptatem',70972,NULL,'2019-11-10 05:26:54','2020-02-12 12:47:13'),(17,5,17,'exercitationem',582712524,NULL,'2019-11-25 07:23:33','2020-02-25 23:54:21'),(18,5,18,'illo',3,NULL,'2019-06-28 07:20:06','2020-03-01 03:50:03'),(19,5,19,'et',37,NULL,'2019-08-09 23:32:42','2020-02-09 20:11:14'),(20,5,20,'et',0,NULL,'2019-07-04 03:28:31','2020-02-27 16:10:35'),(21,5,21,'id',3,NULL,'2019-03-19 19:15:30','2020-02-17 17:41:20'),(22,5,22,'autem',64489413,NULL,'2019-11-24 13:49:44','2020-02-17 14:26:02'),(23,5,23,'adipisci',3080,NULL,'2019-12-13 18:14:18','2020-02-04 19:06:15'),(24,5,24,'animi',0,NULL,'2019-04-20 16:28:59','2020-02-23 07:17:22'),(25,5,25,'dolores',178153,NULL,'2020-02-23 21:27:16','2020-02-20 12:07:20'),(26,5,26,'ad',9058620,NULL,'2019-04-01 19:10:34','2020-02-24 16:21:00'),(27,5,27,'necessitatibus',702399883,NULL,'2019-06-01 17:58:47','2020-02-25 00:13:56'),(28,5,28,'adipisci',749840,NULL,'2019-07-03 23:24:02','2020-02-24 02:41:18'),(29,5,29,'cumque',225,NULL,'2019-04-15 11:00:52','2020-02-25 06:10:46'),(30,5,30,'officia',57057177,NULL,'2019-11-17 14:49:56','2020-02-05 00:48:21'),(31,5,31,'eaque',7534049,NULL,'2019-10-12 00:26:51','2020-02-26 23:05:03'),(32,5,32,'qui',50360,NULL,'2020-01-29 01:00:12','2020-02-20 19:28:26'),(33,5,33,'inventore',77,NULL,'2019-03-15 18:00:51','2020-02-10 07:31:04'),(34,5,34,'mollitia',347555,NULL,'2019-10-21 02:45:32','2020-02-15 08:25:22'),(35,5,35,'voluptas',18284069,NULL,'2019-03-11 12:36:46','2020-02-17 04:04:10'),(36,5,36,'assumenda',31151,NULL,'2019-05-09 08:29:44','2020-02-03 14:15:12'),(37,5,37,'sint',0,NULL,'2019-10-30 22:52:42','2020-02-14 20:37:27'),(38,5,38,'ratione',3,NULL,'2019-06-05 08:54:13','2020-02-07 09:29:46'),(39,5,39,'est',757334,NULL,'2019-10-13 02:59:22','2020-02-22 17:14:03'),(40,5,40,'illum',60370,NULL,'2019-11-04 14:25:26','2020-02-20 04:56:23'),(41,5,41,'eum',927031456,NULL,'2019-10-16 15:43:40','2020-02-06 05:11:29'),(42,5,42,'ut',850850476,NULL,'2019-07-13 16:33:08','2020-02-28 14:16:23'),(43,5,43,'ut',0,NULL,'2019-06-09 04:25:03','2020-02-12 20:17:02'),(44,5,44,'voluptatem',8948,NULL,'2020-02-16 16:20:28','2020-02-21 07:06:49'),(45,5,45,'cum',524883,NULL,'2020-01-08 03:54:56','2020-02-03 15:09:22'),(46,5,46,'velit',66226227,NULL,'2019-10-12 14:02:09','2020-02-17 08:38:08'),(47,5,47,'vero',57166,NULL,'2020-01-27 16:19:19','2020-02-14 21:50:36'),(48,5,48,'et',21,NULL,'2019-07-19 00:22:34','2020-02-22 12:54:55'),(49,5,49,'eos',16728381,NULL,'2019-11-11 06:04:59','2020-02-04 10:57:54'),(50,5,50,'dolor',0,NULL,'2019-03-28 11:02:11','2020-02-14 20:41:56'),(51,5,51,'est',6103179,NULL,'2019-04-06 08:16:16','2020-02-16 20:02:18'),(52,5,52,'in',1,NULL,'2020-01-16 19:57:11','2020-02-02 16:41:56'),(53,5,53,'quo',58,NULL,'2019-03-24 03:02:06','2020-02-13 08:54:53'),(54,5,54,'reiciendis',0,NULL,'2019-09-22 23:30:26','2020-02-14 08:22:17'),(55,5,55,'aliquid',607330,NULL,'2019-10-31 19:12:39','2020-02-28 09:21:37'),(56,5,56,'a',281888198,NULL,'2019-07-17 12:51:09','2020-02-24 10:42:57'),(57,5,57,'eaque',40,NULL,'2019-07-02 16:08:14','2020-03-01 15:03:33'),(58,5,58,'velit',121,NULL,'2019-07-06 09:58:53','2020-02-16 16:46:37'),(59,5,59,'esse',551014238,NULL,'2019-06-12 22:11:05','2020-02-17 05:36:51'),(60,5,60,'explicabo',973,NULL,'2019-08-18 00:16:33','2020-02-13 22:14:15'),(61,5,61,'eaque',92502649,NULL,'2019-05-23 17:10:16','2020-02-24 19:13:11'),(62,5,62,'expedita',185274156,NULL,'2019-10-12 05:11:33','2020-02-18 19:58:55'),(63,5,63,'dolor',19899,NULL,'2020-01-28 08:54:49','2020-02-18 05:45:11'),(64,5,64,'sit',9,NULL,'2019-03-29 14:00:48','2020-02-26 20:10:31'),(65,5,65,'ut',84,NULL,'2020-02-28 20:25:38','2020-02-03 03:47:42'),(66,5,66,'et',2295429,NULL,'2019-05-29 01:44:00','2020-02-09 18:35:48'),(67,5,67,'ipsa',146788601,NULL,'2020-01-09 13:22:34','2020-02-03 13:07:44'),(68,5,68,'cum',7135086,NULL,'2019-08-03 17:07:14','2020-03-02 03:06:52'),(69,5,69,'maiores',749209,NULL,'2019-09-11 17:48:34','2020-02-15 23:18:25'),(70,5,70,'id',0,NULL,'2019-06-17 05:43:49','2020-02-11 01:22:30'),(71,5,71,'excepturi',8,NULL,'2019-06-14 09:32:00','2020-02-04 00:04:32'),(72,5,72,'animi',8044,NULL,'2019-07-12 00:19:06','2020-02-27 19:09:15'),(73,5,73,'cupiditate',64,NULL,'2019-03-02 21:08:05','2020-02-24 14:01:30'),(74,5,74,'laudantium',9552,NULL,'2019-11-28 07:50:06','2020-02-29 01:53:28'),(75,5,75,'eveniet',94,NULL,'2019-10-16 04:20:04','2020-02-15 05:49:48'),(76,5,76,'sunt',7,NULL,'2019-08-30 09:29:18','2020-02-23 03:25:35'),(77,5,77,'quia',300,NULL,'2020-02-07 10:10:54','2020-02-15 10:21:35'),(78,5,78,'quo',0,NULL,'2019-08-08 18:14:25','2020-02-24 00:33:03'),(79,5,79,'et',14051,NULL,'2019-04-01 17:19:50','2020-02-14 12:30:17'),(80,5,80,'eum',24,NULL,'2019-03-29 10:44:37','2020-02-09 22:50:51'),(81,5,81,'eius',923,NULL,'2020-01-02 20:52:26','2020-02-19 11:16:55'),(82,5,82,'aut',6365,NULL,'2020-02-28 08:47:54','2020-02-25 07:56:05'),(83,5,83,'suscipit',0,NULL,'2019-11-04 11:30:46','2020-02-14 18:28:44'),(84,5,84,'aut',9865153,NULL,'2019-06-30 15:02:18','2020-02-28 03:50:21'),(85,5,85,'ut',5841640,NULL,'2020-02-22 22:26:34','2020-02-24 04:36:20'),(86,5,86,'voluptate',835,NULL,'2020-01-08 15:09:15','2020-02-10 22:23:58'),(87,5,87,'voluptas',5263388,NULL,'2019-04-20 10:58:52','2020-02-23 00:58:52'),(88,5,88,'quod',165029,NULL,'2019-11-24 17:48:24','2020-02-05 03:11:54'),(89,5,89,'perspiciatis',58,NULL,'2019-08-03 08:31:01','2020-02-24 16:25:59'),(90,5,90,'impedit',73937,NULL,'2019-07-08 23:21:42','2020-02-03 11:21:23'),(91,5,91,'sed',79969959,NULL,'2019-08-21 15:42:04','2020-02-16 20:21:55'),(92,5,92,'accusamus',8847420,NULL,'2019-06-27 21:06:48','2020-02-15 18:36:45'),(93,5,93,'repellat',86841,NULL,'2019-05-08 00:15:56','2020-02-05 03:09:00'),(94,5,94,'saepe',0,NULL,'2019-11-24 21:57:25','2020-02-28 10:30:52'),(95,5,95,'et',0,NULL,'2020-01-22 05:13:05','2020-03-01 06:16:42'),(96,5,96,'cupiditate',99165,NULL,'2019-11-27 17:18:41','2020-02-06 16:15:59'),(97,5,97,'expedita',463333287,NULL,'2019-04-26 13:08:53','2020-02-09 13:12:05'),(98,5,98,'dicta',753406,NULL,'2020-02-02 03:00:46','2020-02-18 18:45:38'),(99,5,99,'et',8745969,NULL,'2020-01-14 21:14:45','2020-02-10 00:52:35'),(100,5,100,'et',215495,NULL,'2019-03-11 18:06:14','2020-02-05 14:14:23');
+/*!40000 ALTER TABLE `media` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `media_types`
+--
+
+DROP TABLE IF EXISTS `media_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `media_types` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `media_types`
+--
+
+LOCK TABLES `media_types` WRITE;
+/*!40000 ALTER TABLE `media_types` DISABLE KEYS */;
+INSERT INTO `media_types` VALUES (2,'foto'),(1,'music'),(3,'video');
+/*!40000 ALTER TABLE `media_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `messages`
+--
+
+DROP TABLE IF EXISTS `messages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `messages` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `from_user_id` int unsigned NOT NULL,
+  `to_user_id` int unsigned NOT NULL,
+  `body` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `is_important` tinyint(1) DEFAULT NULL,
+  `is_delivered` tinyint(1) DEFAULT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `messages`
+--
+
+LOCK TABLES `messages` WRITE;
+/*!40000 ALTER TABLE `messages` DISABLE KEYS */;
+INSERT INTO `messages` VALUES (1,37,8,'Quis corrupti aperiam quo quaerat fugiat. Animi debitis deleniti ut. Odit sit quis hic consequatur. Ut iure odit doloribus minima eum.',1,1,'2019-09-04 03:12:23'),(2,15,5,'Quae doloremque excepturi consequatur deleniti tempora nostrum voluptatum. Illum vitae soluta quibusdam. Hic commodi dolore ut eos. Molestiae sunt qui atque esse qui.',1,0,'2019-08-06 05:47:16'),(3,38,2,'Ipsum repellat illum enim aut iste tempore. Reprehenderit beatae asperiores quia labore ut necessitatibus. Error non exercitationem laboriosam est consequatur omnis sunt in. Dolore veniam consectetur nobis laboriosam qui.',1,0,'2019-06-06 18:21:01'),(4,21,4,'Ut numquam vero repudiandae unde. Adipisci ratione nulla fugiat soluta quia dolor. Doloremque dicta nesciunt iure provident aut aut nihil. Ea iusto quam voluptatem.',0,1,'2019-08-09 20:55:29'),(5,24,4,'A consequatur voluptas eum modi a repudiandae. Itaque quos dolores ut quod aut. Possimus et cumque mollitia a architecto doloremque praesentium velit. Itaque quia rerum qui nemo ut omnis dolorum.',0,1,'2019-09-05 20:57:56'),(6,4,0,'Fuga sequi consequatur cumque et. Consequatur aperiam unde nesciunt est. Velit animi occaecati ut non. Minus deleniti ipsum sit.',1,1,'2020-02-12 06:06:04'),(7,10,1,'Voluptas et cupiditate explicabo amet fuga cupiditate voluptate. Velit unde et quam odit. Vero et sit non quia fugiat ut nihil.',0,1,'2019-07-31 18:48:45'),(8,73,7,'Libero asperiores at natus aliquam necessitatibus minima sed. Quas consectetur officia officiis quia harum culpa sequi et. Ad aliquid qui vitae fuga. Reiciendis fuga et qui.',1,1,'2019-12-26 03:34:54'),(9,94,1,'Illum ex qui est quas culpa ratione provident. Reiciendis et harum dolore perspiciatis delectus qui temporibus. In iusto eum et. Earum molestias harum atque consequatur illum repudiandae.',0,1,'2020-01-22 04:21:49'),(10,74,0,'Velit ut saepe ea similique voluptatum. Animi et quod et eos. Voluptas voluptatibus nisi et.',0,1,'2020-02-23 08:35:29'),(11,24,7,'Id consequuntur error soluta quisquam et. Aut excepturi molestiae et assumenda nobis quae. Non sed porro voluptas unde sunt ea voluptas. Aut porro consequatur aspernatur est.',1,1,'2019-03-25 01:22:28'),(12,5,1,'Pariatur aut non officiis nemo aut accusamus aut. Provident nisi aliquid voluptates consequatur cum. Aliquid voluptatem voluptas culpa reprehenderit. Est in nihil aperiam vitae modi ipsa illum.',0,1,'2019-07-24 10:14:32'),(13,17,3,'Quia voluptatem odit numquam excepturi minus. Repellendus corporis hic ut non optio numquam fuga nesciunt. Qui possimus deleniti qui distinctio. Aliquam officiis dolor qui veritatis molestias quisquam et.',1,0,'2019-08-22 14:16:05'),(14,52,3,'Ut omnis ea unde sed temporibus mollitia. Similique sit omnis tempora ipsam corporis et. Dicta similique impedit reprehenderit perspiciatis dolores. Commodi minima quasi est et.',1,0,'2019-08-30 16:56:08'),(15,16,6,'Molestiae est et ad sint commodi. Iusto ea minus inventore earum a voluptatem nihil blanditiis. Et eius nobis eum dolore.',0,1,'2019-08-11 04:13:32'),(16,51,1,'Id explicabo praesentium praesentium at. Quis omnis magnam voluptates at. Sint dolor ipsa recusandae voluptas et enim id. Nemo blanditiis sit hic in excepturi.',1,0,'2019-08-31 08:12:22'),(17,61,3,'Cumque fugit et voluptas rem. Non aspernatur voluptatem laboriosam esse nihil.',1,1,'2019-12-15 14:42:21'),(18,97,9,'Et similique fuga rerum perspiciatis sit ut expedita. Nihil similique vel dicta aut. Tempore incidunt ipsam deleniti quo excepturi.',0,0,'2019-08-17 12:45:44'),(19,36,7,'Doloremque corporis dolor sit velit enim commodi. Qui porro ducimus eveniet. Ipsa ab illo itaque fuga.',0,0,'2019-05-21 07:29:16'),(20,34,8,'Odit odio aut harum voluptas quod. Rerum est alias sed occaecati tempore ratione minima porro. Qui est rerum culpa velit aut.',1,1,'2019-08-01 23:15:01'),(21,64,7,'Facere sed unde explicabo assumenda accusantium ut ut. Ut quod dolor aliquam rem sit ipsum qui cupiditate. Voluptas atque consequatur fugit.',0,1,'2019-11-21 06:55:14'),(22,28,0,'Optio molestiae nesciunt corrupti. Nihil magni nam laudantium dolor consequatur vitae. Sint tenetur asperiores illum asperiores maxime et voluptatibus tempora. Dolorem dignissimos ipsum voluptatem voluptatem.',1,0,'2019-08-13 05:48:05'),(23,48,8,'Est sint architecto quidem et. Odio molestiae sint sunt dignissimos consequatur aut inventore. Deserunt autem dolorem nesciunt sunt quibusdam accusamus. Qui facere ut et accusantium.',1,1,'2019-11-27 03:01:54'),(24,38,3,'Minus excepturi est sapiente reprehenderit et adipisci. Excepturi aspernatur perferendis voluptatem quam. Molestiae fugit molestiae sed aut alias ut. Alias consequatur magni eius possimus.',0,0,'2019-09-22 05:29:24'),(25,50,8,'Iure non blanditiis sit quis tempore et consectetur. Et sunt placeat ratione. Consequuntur est dicta quasi nihil aut.',1,1,'2019-09-07 01:14:15'),(26,7,2,'Asperiores molestiae debitis ut mollitia est illo voluptatum. Ipsa molestiae quis et explicabo. Officia libero explicabo accusamus iusto. Ea debitis nihil et voluptatem adipisci.',0,1,'2020-01-07 17:25:55'),(27,48,8,'Sit perferendis perferendis rerum omnis modi aliquid quod eum. Iure iste sit praesentium.',0,0,'2019-09-26 10:26:04'),(28,64,3,'Voluptas in impedit qui quasi odit. Ex qui veritatis optio perspiciatis harum. Voluptatem voluptatum et eum assumenda aliquid soluta.',1,0,'2019-04-05 01:37:26'),(29,88,6,'Qui eum ut voluptatem in molestiae. Qui ut distinctio et consectetur aliquid excepturi fugiat. Ut dolores saepe vel voluptatem.',1,0,'2019-04-10 15:43:42'),(30,93,9,'Facilis et ratione esse nobis rerum est. Natus vero quia saepe aut qui at. Dolores assumenda quae similique est exercitationem illo deserunt.',1,1,'2019-10-10 10:08:35'),(31,69,2,'Atque saepe voluptas quia ratione. Et facere odit distinctio autem debitis voluptas. Veniam natus quia sed ea quas corporis. Voluptatem dolor natus numquam.',0,1,'2019-12-10 23:44:49'),(32,35,7,'Numquam doloribus iure commodi ut recusandae quam veritatis voluptatem. Explicabo iusto asperiores facilis adipisci et quis unde. Consequuntur doloremque quia non dignissimos dolores voluptas rerum. Sit voluptates qui voluptas aperiam aut voluptatibus autem.',0,1,'2019-05-14 16:13:43'),(33,23,7,'Laboriosam est omnis aut suscipit qui velit. Nam et suscipit omnis vel. Suscipit aperiam fugiat ad quo expedita nesciunt soluta. Aut qui ipsam repellat porro qui.',0,1,'2019-06-16 22:54:49'),(34,68,8,'Omnis repellat distinctio fugit repellendus. Non nesciunt saepe enim eligendi voluptate esse et. Et numquam aut ab. Quia neque necessitatibus dolorum reprehenderit non.',0,0,'2019-05-24 00:38:49'),(35,34,7,'Asperiores praesentium non alias qui. Voluptas quia expedita facilis aliquam odio doloremque. Labore delectus nam qui possimus natus eum laboriosam. Magnam tempora nihil praesentium esse sunt sed distinctio.',0,1,'2020-01-16 02:54:22'),(36,88,8,'Ullam vel porro maiores et libero deleniti. Voluptatem sed veritatis voluptatem quibusdam id vitae. Perferendis molestias rerum et sed. Expedita eos inventore voluptatibus ullam natus iure molestiae ex.',0,0,'2019-11-17 04:54:25'),(37,63,5,'Incidunt incidunt consequuntur voluptatem quibusdam dolorem quae. Dignissimos doloremque mollitia molestiae officiis magnam assumenda qui. Reiciendis sit natus laudantium et voluptatum odit.',0,0,'2019-06-15 19:07:15'),(38,85,1,'Id aspernatur pariatur voluptatibus ad. Quam est officiis porro delectus consequatur architecto et. Eveniet ea rerum qui aut quia quia.',0,0,'2019-05-29 02:54:07'),(39,21,2,'Numquam enim quas animi eos autem. Cum cupiditate tenetur a. Dolor modi corrupti corporis perspiciatis illum. Quos suscipit nesciunt neque aperiam labore sed.',0,0,'2019-05-11 10:07:07'),(40,41,9,'Repellat quia quis eum voluptate. Provident est voluptas qui. Quia iusto blanditiis ullam aut iste animi ut voluptas. Ex accusamus ad dolor odit sapiente.',1,1,'2020-02-04 12:14:10'),(41,62,5,'Molestias provident totam sunt possimus nihil. Et deserunt voluptatem necessitatibus vitae repellat. Ut eos inventore fuga molestiae voluptatem. Sit adipisci vitae nisi qui animi sit.',0,1,'2019-03-11 11:11:14'),(42,9,7,'Ea quo nobis mollitia laborum at quae. Et nesciunt nam cum et nobis. Quia occaecati soluta et dolorem. Sapiente sint qui sunt perspiciatis est.',0,1,'2020-01-05 19:00:00'),(43,77,8,'Debitis facere rerum ea magni deleniti. Aut enim quam eum in reprehenderit. Enim voluptatem quo voluptatem labore.',0,1,'2019-07-06 17:02:18'),(44,34,7,'Consequatur vel eos quasi. Laborum maiores similique vero et eveniet. Quisquam earum non pariatur quia impedit asperiores. Quibusdam labore cupiditate sint enim perferendis.',0,1,'2020-02-01 12:57:45'),(45,18,6,'Et eos dignissimos architecto quidem. Ullam est optio eaque voluptatem sit nihil. Aut atque est optio velit. Et dolorem tempora unde autem aut est ea.',1,1,'2019-10-16 02:10:56'),(46,67,4,'Rerum pariatur nulla quasi corrupti quidem. Est eos et velit optio voluptatum natus voluptas. Voluptates sit distinctio ut nostrum eum ut quia. Quae quia dicta et.',1,0,'2019-03-17 03:57:40'),(47,22,9,'Voluptas vitae totam sit consequatur quis excepturi hic sed. Est esse commodi temporibus exercitationem dolores. Temporibus magni facilis vel nam. Sit omnis atque eum pariatur enim repellat molestiae.',0,0,'2019-07-30 18:40:29'),(48,54,2,'Aut ipsa magnam quisquam. Quos earum illum pariatur sint est. Deleniti repellat maxime consequatur officiis.',0,1,'2019-11-20 11:47:12'),(49,54,0,'Et assumenda error dolores. Est ea aspernatur enim officiis explicabo ab aut. Vitae non illo quo quasi.',1,0,'2019-09-28 14:34:17'),(50,14,8,'Explicabo nesciunt quis aspernatur quas necessitatibus mollitia. Enim temporibus nostrum laudantium aut dolorum. Aut molestiae non ut. Ea at fugit et veniam eum sed sit est.',1,1,'2019-12-10 14:54:12'),(51,76,3,'Aut molestiae veniam aspernatur sequi quos nemo laboriosam nulla. Dolorem consectetur vel qui incidunt. Accusantium hic aspernatur tempora in eos sunt. Hic sed sit et culpa enim modi et.',1,0,'2019-06-22 00:03:45'),(52,65,3,'Cum qui iste dolor et. Magni error ea possimus perferendis quibusdam aut. Commodi quaerat doloribus dolor repudiandae eius architecto praesentium. Aut nam ratione non id porro necessitatibus et.',1,0,'2019-03-10 10:15:16'),(53,43,4,'Facilis sint quidem accusamus dolorum quos. Ea harum consequuntur nihil hic illum libero. Cupiditate commodi officia voluptatem quis ab mollitia laboriosam.',0,0,'2019-08-28 19:37:18'),(54,91,3,'Facilis quisquam sed distinctio ut deserunt qui. Animi magnam adipisci aliquid. Est aliquam est perspiciatis non voluptas. Non accusamus quo sunt accusamus.',0,1,'2019-09-13 12:23:41'),(55,36,5,'A velit earum distinctio facere est illo aperiam. Ullam fugit aut quo nostrum voluptatem. Dolorem amet quidem iure et. Praesentium inventore voluptas voluptatem odio assumenda eaque sunt.',0,0,'2019-08-12 15:02:24'),(56,21,2,'Voluptas voluptatem et porro. Optio sed quibusdam dolorum vel cupiditate dolor accusamus. Voluptatem quia odio excepturi dignissimos ut animi.',1,0,'2020-01-16 23:36:50'),(57,82,4,'Et eos quaerat non possimus. Ratione qui non aut facilis. Sunt dolor maxime recusandae inventore consequuntur fuga.',0,1,'2019-03-29 19:30:21'),(58,10,9,'Molestias consequatur aliquid repellat autem. Sit quasi alias ut ea ut. Aut et qui eveniet iste. Repellat provident architecto illo incidunt consectetur sequi sunt maiores. Nemo molestiae ut tempore qui maxime.',1,0,'2019-03-11 13:18:17'),(59,74,5,'Est occaecati est eum sunt expedita ut. Doloremque suscipit ut dolores totam quisquam et. Atque nulla natus quidem aut placeat.',0,0,'2019-06-18 04:40:38'),(60,26,8,'Aliquid asperiores voluptatum doloribus pariatur ab recusandae qui. Aut quae totam repudiandae. Voluptatum ratione repellendus deleniti enim.',1,1,'2019-11-30 08:05:17'),(61,92,8,'Eos nemo doloribus perspiciatis sint rerum blanditiis commodi perferendis. Ex dolore atque ducimus et odio hic. Sint facere ut dolorum.',1,1,'2019-08-19 00:22:40'),(62,74,9,'Error fugiat omnis aut neque. Id blanditiis maxime assumenda sed perferendis. Est voluptate eos magni.',1,1,'2019-06-06 14:57:23'),(63,41,6,'Quae porro ipsam quisquam dolore. Exercitationem voluptas ea saepe necessitatibus voluptatem quibusdam. Ipsam soluta autem veritatis sit ut vel debitis. Eligendi eligendi minus amet vel est libero. Labore omnis est iure voluptate architecto non dolorem.',1,1,'2019-04-05 15:27:39'),(64,72,5,'Aut qui sed ipsum dolorem quia impedit. Est molestias dicta inventore autem. Quia est voluptatem ex aut vel. Tempora libero voluptates et beatae aspernatur quasi in.',1,1,'2019-04-05 23:42:56'),(65,34,2,'Ducimus eos provident sunt repellendus. Facilis nostrum occaecati similique voluptatem aut.',0,0,'2019-09-05 06:57:22'),(66,37,4,'Consectetur fuga suscipit odit expedita. Facere sunt cumque ut. Eveniet ex distinctio dolor. Occaecati quia illo commodi reprehenderit officia quas debitis voluptatem.',1,1,'2019-10-27 12:00:36'),(67,39,0,'Hic dolore ea qui ad. Reprehenderit laboriosam aliquid sunt quisquam eveniet nesciunt quo. Et aut et et neque modi occaecati dolor.',1,1,'2019-04-23 09:56:52'),(68,9,9,'Suscipit ipsa aliquam rem consequatur maxime est sed aut. Quod vel totam quo eius velit minus. Quia qui et ut.',0,1,'2019-11-26 02:49:04'),(69,65,4,'Nihil corrupti odit aut quo non voluptatum. Qui vel ut accusamus molestiae quo iste et. Est illo molestiae dolor id. Molestiae fugiat eius delectus rerum.',0,1,'2019-10-02 08:45:51'),(70,34,8,'Et magnam sit cupiditate cum voluptatem. Ut cupiditate nihil voluptates odit aut voluptas velit. Totam rerum possimus tempore deserunt et quia. Dolorem debitis voluptatem quo quas consequuntur culpa est enim.',1,0,'2019-05-21 14:15:02'),(71,95,3,'Aspernatur voluptatum praesentium inventore maxime. Eum dolores id praesentium odio. Aut quibusdam non harum et tempora autem. Dolorem est dolore beatae aperiam perferendis alias.',0,1,'2019-12-23 08:32:59'),(72,55,0,'Occaecati labore fugit quia corrupti dolores. Enim voluptatem sit est. Maxime soluta vero eos ut. Nemo iure quos delectus saepe iste.',1,1,'2019-09-17 20:08:53'),(73,62,9,'Voluptatem eius id molestiae sapiente. Rem voluptatum provident vel et iure consectetur. Suscipit maiores ducimus enim adipisci quam. Sed asperiores et id et delectus.',1,1,'2019-11-07 21:17:52'),(74,70,6,'Qui voluptas voluptatem ut cum quo ut odit. Quia necessitatibus maiores dicta sit voluptatem in. Et sit rem quidem aliquam corporis.',1,1,'2020-02-17 15:30:02'),(75,30,0,'Qui hic esse dolore enim consequatur. Nisi praesentium doloribus quis eaque esse. Dolores voluptatum explicabo provident natus. Vel quae quo incidunt aut pariatur.',0,0,'2019-07-11 22:03:17'),(76,43,2,'Consequatur quidem facere nam iusto sed tempora quo. Ut ab aut dolorem sequi. Quia ad sed sapiente.',1,0,'2019-08-21 18:48:54'),(77,25,4,'Ut ex quia ullam. Omnis quia rerum et. Consectetur quia facere veniam quas ut. Quia recusandae omnis vel qui eaque et perspiciatis aperiam.',0,0,'2019-08-17 12:42:32'),(78,81,5,'Aperiam aut consequatur ab excepturi. Soluta architecto reprehenderit aut nisi quibusdam. Non harum molestias temporibus illum totam.',1,0,'2019-11-17 05:03:27'),(79,2,9,'Cum nam repellat totam animi magni tenetur. Quis illo unde voluptatem. Nihil voluptatem nemo hic recusandae sit quod. Est eum est ea ipsam error non labore. Accusantium dolor quos alias illo sint incidunt.',0,1,'2019-08-20 00:17:18'),(80,92,2,'Architecto sit qui magnam repellat expedita distinctio quibusdam. Necessitatibus ut voluptate sit aspernatur fugit. Non est ipsum quas id.',0,1,'2019-05-17 18:30:11'),(81,42,8,'Tempora ex totam natus accusantium vero assumenda laudantium. Totam ea saepe sunt quia. Laudantium modi quibusdam nihil sapiente. Rerum qui minima ad ipsa nihil culpa qui ut.',0,0,'2019-10-08 18:16:28'),(82,41,8,'Officia dolores delectus consequuntur voluptatibus. Facilis reiciendis quae sit sit a ea autem. Labore ad repellat adipisci mollitia aut modi id et.',1,0,'2020-01-27 02:19:22'),(83,85,5,'Nulla eaque consequatur ut soluta. Est hic non eveniet ut atque. Assumenda molestias qui et repellendus magnam natus. Numquam amet praesentium sunt tempore ut.',1,1,'2019-08-01 16:06:19'),(84,69,1,'Et aperiam quas omnis delectus. Excepturi enim voluptas magnam in eum. Rerum amet rerum et recusandae. Aut ea officia perferendis repudiandae architecto.',1,1,'2019-12-12 17:51:36'),(85,40,7,'Aperiam totam eum repudiandae. Recusandae aut accusamus quia cum praesentium doloremque amet. Possimus occaecati rerum sed minima et.',0,1,'2019-03-16 14:19:22'),(86,86,2,'Excepturi incidunt quod exercitationem possimus. Fugit quo ex id ut. Quia quia ab corrupti dolorum animi.',1,0,'2019-06-08 02:20:43'),(87,51,5,'Repellat voluptatibus qui laudantium. Rerum omnis facilis non quis et error.',1,1,'2019-05-25 19:45:06'),(88,68,5,'Ullam non distinctio dolore eum quas et quia. Cum saepe similique aperiam quibusdam ullam sint. Eos id vel dolor iusto hic fugiat inventore rerum. Quia sit impedit nesciunt qui aut.',1,0,'2019-08-12 23:51:35'),(89,67,4,'Sit ea iste quia quia sed perspiciatis vero fugiat. Cumque corporis placeat iste qui voluptas occaecati quos quidem. Inventore sint ratione omnis consequatur unde.',0,0,'2019-12-19 05:50:16'),(90,48,1,'Placeat dignissimos hic nam. Voluptatem unde ad alias asperiores. Nemo qui quibusdam sint praesentium. Dolor nihil sit ut deleniti corrupti odit consequuntur.',0,0,'2019-10-15 06:56:21'),(91,8,4,'Magni consequatur repellendus asperiores repudiandae ad velit. Blanditiis reprehenderit illum doloremque voluptatem. Nisi accusamus exercitationem et maiores incidunt nobis dolorem mollitia. Magni placeat delectus deserunt tempora occaecati.',0,0,'2019-08-31 16:11:58'),(92,7,8,'Error sequi voluptatibus ipsum at sint in. Numquam quo voluptas nesciunt illum error sed. Consequatur eos aliquam enim in vel.',1,0,'2019-07-15 20:29:50'),(93,29,7,'Molestiae tempore in recusandae debitis alias. Voluptas cum libero doloribus fugit magni ut ut. Pariatur esse error dolores voluptates excepturi qui. Quod ratione temporibus eligendi.',0,1,'2020-02-01 23:03:21'),(94,1,5,'Debitis totam fugiat natus illo inventore. Est ullam excepturi voluptas debitis cumque nam dolorem numquam. Sequi voluptas ab et mollitia. Harum eos consequatur et ea. Quia sed nisi laboriosam at est.',0,1,'2020-01-04 22:07:25'),(95,83,1,'Quasi similique aut sed necessitatibus aut aut ut. Repellat voluptatem eos laudantium ratione perferendis. Libero maxime qui nisi laudantium sint quaerat. Et at repellendus debitis.',0,1,'2019-05-20 07:17:30'),(96,24,8,'Dolorum pariatur quia non sequi nam soluta enim quis. Est aliquid vel mollitia debitis. Rem aut sed quibusdam eos possimus consequatur labore.',1,0,'2019-07-13 11:41:47'),(97,77,9,'Qui quo sit aut consequatur minus. Cum consequuntur dolor ad. Et id qui unde.',0,1,'2019-06-03 21:58:11'),(98,95,1,'Ratione accusamus vero distinctio alias quas et aut qui. Voluptate incidunt et eius doloribus quo non deserunt. Maiores voluptatibus harum ab officia. Eos ducimus nulla eum aperiam quam dolor.',1,1,'2019-08-03 01:45:03'),(99,83,5,'Culpa culpa quia voluptatum similique quod quas animi eos. Magnam iste qui possimus dolores et. Et id sed neque consequatur ex. Labore est blanditiis et.',0,1,'2019-12-03 22:01:42'),(100,64,2,'Necessitatibus exercitationem ullam delectus quam molestiae non. Id aut qui architecto quas quia quidem assumenda. Eveniet sunt eos doloremque temporibus libero sed. Corrupti quod exercitationem vel aut magni vel.',1,0,'2019-05-18 11:48:38');
+/*!40000 ALTER TABLE `messages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `profiles`
+--
+
+DROP TABLE IF EXISTS `profiles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `profiles` (
+  `user_id` int unsigned NOT NULL,
+  `gender` char(1) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` date DEFAULT NULL,
+  `city` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `country` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `profiles`
+--
+
+LOCK TABLES `profiles` WRITE;
+/*!40000 ALTER TABLE `profiles` DISABLE KEYS */;
+INSERT INTO `profiles` VALUES (1,'','1992-12-05','26717-0149',''),(2,'','1994-03-22','56703',''),(3,'','1992-10-02','03035',''),(4,'','1970-02-10','50320-9812',''),(5,'','1989-04-17','14873',''),(6,'','2004-09-01','40618-5581',''),(7,'','1970-07-21','08548-3540',''),(8,'','2014-02-19','05656-9062',''),(9,'','1991-07-09','12536-6282',''),(10,'','1975-01-14','05075',''),(11,'','2011-01-04','92708-0786',''),(12,'','2009-04-03','46236-5946',''),(13,'','2005-05-29','31825-6628',''),(14,'','1997-08-15','05290',''),(15,'','1976-07-06','82584',''),(16,'','1973-07-30','94136-2928',''),(17,'','2001-01-30','02990-7447',''),(18,'','2017-12-11','47995-3561',''),(19,'','1988-05-29','18776-3777',''),(20,'','1986-01-29','20597',''),(21,'','1984-06-01','23201',''),(22,'','1978-01-01','75382',''),(23,'','1979-09-02','34303-5237',''),(24,'','1997-04-07','80762-2452',''),(25,'','2014-08-25','49332',''),(26,'','2014-01-01','57204-7505',''),(27,'','1987-08-02','82886',''),(28,'','2009-10-13','60333-6618',''),(29,'','2017-01-12','67423-9626',''),(30,'','1995-03-14','17595-0898',''),(31,'','1980-10-30','04912',''),(32,'','1970-04-28','55825-2697',''),(33,'','1986-12-19','99354',''),(34,'','1997-03-04','66995-3634',''),(35,'','1974-01-28','19344-8168',''),(36,'','2004-03-06','99896-8126',''),(37,'','2001-04-22','67553-4824',''),(38,'','2012-03-18','77941',''),(39,'','1998-10-09','19045-9998',''),(40,'','1981-07-14','72140-6647',''),(41,'','1979-06-05','92373',''),(42,'','2012-09-28','68808',''),(43,'','2000-03-09','73251-0829',''),(44,'','1992-06-15','50090',''),(45,'','2009-06-23','85510',''),(46,'','2011-06-27','19265-3430',''),(47,'','2007-03-11','84157',''),(48,'','2010-05-22','95938',''),(49,'','2008-05-06','02603',''),(50,'','2005-01-09','32904',''),(51,'','1971-04-21','87729',''),(52,'','1996-11-27','71379',''),(53,'','2018-08-10','07965',''),(54,'','1996-10-23','74234',''),(55,'','1984-08-05','56581-6733',''),(56,'','2018-01-13','77045',''),(57,'','1971-01-22','22175-7574',''),(58,'','1979-04-21','86158',''),(59,'','1983-04-24','69395',''),(60,'','1979-02-19','30653-2186',''),(61,'','1985-02-21','21512-9888',''),(62,'','1978-01-10','32108-4654',''),(63,'','2003-01-13','64898-7671',''),(64,'','2008-06-09','48754',''),(65,'','1983-11-28','28614-3596',''),(66,'','2019-10-04','57594',''),(67,'','1992-10-26','12190-0808',''),(68,'','1972-08-08','00815',''),(69,'','2017-05-05','25745-1546',''),(70,'','1972-12-29','90016-4137',''),(71,'','2017-10-08','72039-2431',''),(72,'','1993-09-19','61806',''),(73,'','1987-09-08','22760',''),(74,'','2007-05-14','29470-8794',''),(75,'','2013-03-05','62695-2740',''),(76,'','1989-10-06','37028-5962',''),(77,'','1973-02-08','61517',''),(78,'','1979-11-09','00648-5338',''),(79,'','1994-08-25','58836',''),(80,'','1980-10-05','78455-2583',''),(81,'','2005-09-24','87679-4220',''),(82,'','2004-01-07','02413-4482',''),(83,'','1991-08-08','65526',''),(84,'','1979-10-15','01977',''),(85,'','2012-06-28','25237',''),(86,'','2005-12-05','61302',''),(87,'','2002-08-07','15382-4557',''),(88,'','2005-08-04','27216-9488',''),(89,'','1973-05-18','16616-7184',''),(90,'','1981-02-17','47307-0001',''),(91,'','2011-08-25','33552-1739',''),(92,'','2002-12-05','19375',''),(93,'','2006-06-16','66243-9896',''),(94,'','2014-01-11','11233-4284',''),(95,'','2018-06-13','66921',''),(96,'','1973-08-09','65173',''),(97,'','1993-04-12','37317-5061',''),(98,'','1976-05-11','82030-1541',''),(99,'','1985-07-07','28222-4347',''),(100,'','1993-05-11','22610-3065','');
+/*!40000 ALTER TABLE `profiles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `last_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(120) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(120) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `phone` (`phone`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Tyler','Lindgren','sandrine.bahringer@example.org','822-559-0280','2010-07-17 00:51:34','2020-02-21 00:56:09'),(2,'Hugh','Rippin','raheem85@example.com','(672)834-4580','2015-04-25 03:45:13','2020-02-25 20:42:26'),(3,'Connor','Kub','jeremy12@example.net','898-545-0269','2016-03-22 09:42:04','2020-02-13 20:07:12'),(4,'Reagan','Greenholt','kailyn53@example.org','(594)023-0492x97745','2014-11-05 06:58:03','2020-02-27 11:37:52'),(5,'Loy','Cartwright','egrant@example.org','452-698-0374','2017-11-28 03:08:04','2020-02-07 21:39:22'),(6,'Kiana','Streich','wsenger@example.org','(359)632-1350x37119','2014-06-11 14:04:57','2020-02-16 22:02:39'),(7,'Maybell','Fahey','rupert02@example.com','331-927-3609','2015-05-08 16:58:31','2020-02-11 20:30:39'),(8,'Allan','Reichel','huel.winston@example.com','042.914.5718','2010-09-12 01:00:55','2020-02-02 17:18:20'),(9,'Nichole','Effertz','van.altenwerth@example.org','1-156-268-3271x5634','2018-09-24 14:54:56','2020-02-17 05:11:13'),(10,'Judah','Schultz','krajcik.arnoldo@example.org','967.120.0084','2015-09-12 12:57:29','2020-02-12 23:46:07'),(11,'Ross','Crist','fay.kurtis@example.com','117-427-1101','2013-01-16 02:32:49','2020-02-28 08:17:50'),(12,'Hailee','Collins','qsatterfield@example.org','+81(7)5313313194','2014-11-06 03:26:38','2020-02-14 15:41:01'),(13,'Kiara','Wolff','nabshire@example.net','1-068-498-5615','2013-11-04 00:03:37','2020-02-21 13:05:30'),(14,'Peter','Cassin','gislason.braeden@example.com','658.039.5264','2015-06-17 14:26:44','2020-02-13 13:19:52'),(15,'Jordyn','Kautzer','ojaskolski@example.net','+61(2)5114038429','2017-07-13 22:53:00','2020-02-26 11:58:58'),(16,'Yvonne','Ruecker','celine.reilly@example.net','(642)521-5499x65004','2010-04-10 08:24:23','2020-02-17 02:16:40'),(17,'Kay','Huel','roberta.buckridge@example.com','828.823.8821','2013-03-21 05:56:05','2020-02-09 21:01:14'),(18,'Aileen','Ratke','nrath@example.org','(032)071-5613x5326','2010-06-27 20:22:10','2020-02-13 04:14:50'),(19,'Ona','Bergstrom','rae.o\'conner@example.com','1-136-867-6945x8772','2012-03-27 09:29:19','2020-02-28 04:23:22'),(20,'Dino','Fritsch','ohand@example.org','418.551.9560x64665','2018-05-01 01:38:29','2020-02-13 00:47:02'),(21,'Gideon','Howe','abbott.nia@example.net','559-387-5613x892','2019-03-01 22:55:15','2020-02-05 09:31:55'),(22,'Hayden','Upton','kling.lowell@example.com','1-082-089-1661x118','2012-08-10 22:13:28','2020-02-29 16:31:59'),(23,'Giovanni','King','triston.hackett@example.org','(565)156-6531x6939','2017-10-27 16:11:35','2020-02-24 11:00:33'),(24,'Shad','Klein','zleannon@example.org','116.729.6965','2016-12-15 04:07:18','2020-02-06 22:50:28'),(25,'Clovis','Cremin','lowell56@example.org','012.525.7669x21882','2016-10-09 15:11:04','2020-02-10 22:29:31'),(26,'Katlyn','Hauck','chelsie45@example.net','119-139-2063','2010-04-28 18:12:02','2020-02-07 14:57:56'),(27,'Jovany','Steuber','pagac.trevion@example.net','477-654-0992x854','2017-07-21 07:28:19','2020-02-12 09:08:47'),(28,'Granville','Tillman','afahey@example.com','043-194-1453x65989','2011-03-28 15:49:31','2020-02-11 17:14:25'),(29,'Allison','Herman','ubeier@example.org','+24(3)6900668976','2017-07-10 09:52:46','2020-02-21 00:53:33'),(30,'Stephanie','Hansen','myrna75@example.net','1-308-345-4630x03300','2015-04-08 04:48:36','2020-02-17 03:52:03'),(31,'Antwon','Maggio','magdalen59@example.org','902-915-9479','2019-05-09 20:22:06','2020-02-20 14:17:48'),(32,'Dane','Prohaska','helene52@example.org','(799)581-8746x229','2020-02-04 11:07:26','2020-02-07 14:15:54'),(33,'Jameson','Kling','funk.rusty@example.org','622.881.0547x042','2013-03-23 12:41:18','2020-02-22 01:27:32'),(34,'Alberta','Daniel','kozey.consuelo@example.net','01219730127','2019-08-07 14:52:04','2020-02-07 17:37:27'),(35,'Rosalinda','Stroman','terdman@example.com','1-920-167-8460x50122','2012-05-17 07:43:24','2020-02-13 01:42:36'),(36,'Emmanuelle','Durgan','pkuhic@example.net','341-030-1628x890','2013-04-13 18:23:14','2020-02-02 18:05:13'),(37,'Mallie','Johns','ydickens@example.com','1-995-414-8297x572','2013-01-15 01:48:29','2020-02-21 05:22:12'),(38,'Joan','Sawayn','wilhelm.schuppe@example.com','+37(8)2366284567','2011-02-05 09:34:50','2020-02-21 00:26:35'),(39,'Selena','Schoen','sophia.bartoletti@example.com','745.151.1705x9623','2016-06-20 04:37:38','2020-02-21 05:17:28'),(40,'Orin','Ledner','albert.predovic@example.org','163-555-5313x06760','2018-09-01 23:22:15','2020-02-09 20:42:59'),(41,'Gunnar','Aufderhar','lindsay.o\'keefe@example.com','390.169.7674x0487','2016-09-23 08:08:19','2020-02-15 22:23:18'),(42,'Mariah','Douglas','alessandra07@example.org','533-487-8225x80773','2014-08-31 15:32:00','2020-02-04 05:52:17'),(43,'Ansel','Tremblay','kiara.funk@example.org','019.017.9615x13679','2014-12-01 13:31:12','2020-02-22 08:12:24'),(44,'Kaley','Kessler','kris.lelia@example.com','(863)761-5007x237','2019-04-21 09:48:43','2020-02-18 05:42:10'),(45,'Michelle','Emard','mayert.damaris@example.org','+00(6)5812952197','2014-02-26 05:34:57','2020-02-03 01:48:43'),(46,'Leta','Greenfelder','willis53@example.com','1-089-381-2892x93271','2018-10-17 04:05:24','2020-02-27 15:30:24'),(47,'Osvaldo','Bruen','filiberto.willms@example.net','+19(9)3326536303','2018-04-29 07:51:34','2020-02-11 13:35:38'),(48,'Euna','Sauer','tkris@example.org','1-557-456-2615','2011-04-13 13:24:51','2020-02-22 22:03:16'),(49,'Nat','Abbott','sipes.vernie@example.org','(752)607-5522x8522','2018-12-04 10:18:03','2020-02-29 06:36:42'),(50,'Montana','Lemke','llakin@example.com','1-996-359-9453x344','2017-11-27 21:58:28','2020-02-21 08:32:25'),(51,'Dariana','Rogahn','dayna08@example.net','569.426.3331x61462','2011-06-01 22:23:21','2020-02-03 10:32:31'),(52,'Aurelia','Romaguera','jasper.swaniawski@example.net','+50(4)2031040799','2017-07-24 21:27:23','2020-02-06 18:23:39'),(53,'Jeffery','Witting','nicklaus07@example.com','1-561-555-5941','2016-05-23 20:09:40','2020-02-07 09:39:30'),(54,'Roberta','Altenwerth','rosenbaum.rupert@example.net','483-558-2808x931','2014-05-28 01:03:27','2020-03-01 04:27:43'),(55,'Raquel','Grady','nwuckert@example.org','781.633.6020x38240','2018-07-25 18:13:13','2020-02-06 19:06:31'),(56,'Joey','Hettinger','mleannon@example.org','(207)862-8579','2014-05-25 04:38:18','2020-02-27 04:45:04'),(57,'Tyra','VonRueden','lexie.satterfield@example.net','146-111-1175x41337','2013-03-02 10:58:38','2020-02-14 23:21:34'),(58,'Orland','Funk','deborah.weissnat@example.org','919-287-2091','2017-11-05 16:04:09','2020-02-27 18:25:54'),(59,'Arch','Bartell','ypurdy@example.org','1-265-729-9526x7895','2015-01-18 18:56:29','2020-02-03 22:55:17'),(60,'Rahul','Hintz','toy.richmond@example.com','105.608.3808','2017-09-12 11:09:48','2020-02-24 06:42:12'),(61,'Pedro','Gutkowski','esperanza32@example.com','307-130-2750x411','2012-11-23 16:28:36','2020-02-13 19:51:22'),(62,'Erick','Kuhn','ratke.monserrat@example.net','604-601-1424','2019-11-15 13:32:02','2020-02-16 03:52:55'),(63,'Larissa','Swift','mcdermott.ahmad@example.com','1-034-344-9726','2010-07-23 22:35:24','2020-03-02 05:44:08'),(64,'Cristobal','Mills','sbauch@example.com','1-886-876-1963x52768','2019-11-10 20:51:09','2020-02-09 11:31:29'),(65,'Jayde','Bernier','hhodkiewicz@example.com','883-466-4581x5784','2012-07-31 21:10:14','2020-02-21 07:07:56'),(66,'Mary','Powlowski','harris.misty@example.org','(405)727-2332','2010-06-10 14:09:32','2020-02-12 18:30:45'),(67,'Elta','Wisozk','hilbert.marvin@example.net','930.379.6412','2012-07-22 07:11:41','2020-02-05 13:15:53'),(68,'Kylee','Morar','fbeatty@example.net','180-572-3775','2011-05-21 04:07:48','2020-02-18 20:37:44'),(69,'Faustino','Cruickshank','rschneider@example.net','084-974-3639x57813','2012-09-22 06:47:15','2020-02-14 11:09:35'),(70,'Maia','Reichel','qthompson@example.org','1-854-997-2174x0963','2017-01-05 12:29:50','2020-02-14 14:58:23'),(71,'Keyshawn','Bechtelar','winnifred18@example.net','1-986-673-9003x6204','2015-01-26 18:28:43','2020-02-24 20:17:57'),(72,'Fausto','Greenfelder','kaley.pfannerstill@example.org','(793)640-5935x633','2018-04-12 00:15:06','2020-02-24 13:42:47'),(73,'Gardner','Nienow','deshaun.schulist@example.org','218.048.5411','2017-03-03 17:39:25','2020-02-12 19:04:58'),(74,'Jaycee','Kemmer','estehr@example.org','512-557-2335x41937','2010-04-26 20:53:12','2020-02-07 07:35:03'),(75,'Carey','O\'Hara','darryl.leannon@example.net','1-756-621-0935x5990','2011-02-08 00:59:59','2020-02-11 00:45:52'),(76,'Don','Schinner','jjaskolski@example.org','110-241-9973','2017-03-01 09:56:48','2020-02-28 00:53:09'),(77,'Ona','Bednar','wendy16@example.net','+34(9)2928371417','2017-08-01 12:38:44','2020-02-27 16:40:11'),(78,'Viola','Purdy','heath.koepp@example.com','1-660-945-5062x48950','2013-11-21 13:29:41','2020-03-02 08:13:59'),(79,'Alice','Schmeler','flatley.tia@example.net','1-745-683-8122x566','2010-10-11 14:05:33','2020-02-17 01:45:32'),(80,'Ramiro','Hoppe','bpadberg@example.com','771.709.0536x778','2011-05-31 15:00:21','2020-02-11 09:23:27'),(81,'Ryan','Schulist','brandon.leffler@example.com','1-885-980-6386x250','2019-01-25 12:18:28','2020-02-09 16:03:07'),(82,'Kylie','Bailey','sleuschke@example.net','1-918-371-5977x752','2016-06-27 09:10:58','2020-02-27 06:46:58'),(83,'Juvenal','Dickens','xfeil@example.net','855.942.6478x9428','2011-08-17 19:42:45','2020-02-02 15:57:06'),(84,'Madisen','Doyle','green55@example.net','060.065.5764x675','2010-11-30 05:32:26','2020-02-25 20:43:13'),(85,'Julianne','Cassin','urunte@example.net','04298874109','2016-05-14 18:04:28','2020-02-25 10:39:37'),(86,'Samantha','Howe','upton.april@example.com','700.850.8672','2010-10-29 13:22:25','2020-02-28 05:25:16'),(87,'Amani','Kovacek','uriel.huel@example.net','07596227417','2018-10-27 06:05:34','2020-02-28 13:00:41'),(88,'Kyra','Gerhold','justice.moen@example.org','411.167.9436','2011-12-31 16:37:24','2020-02-29 03:49:32'),(89,'Julien','Harvey','nolan.jewell@example.org','373.815.7234','2017-12-26 12:28:51','2020-02-22 03:20:58'),(90,'Nora','Satterfield','jaskolski.rachael@example.org','(911)734-5477','2013-09-16 09:06:48','2020-03-02 07:02:53'),(91,'Adaline','Grady','kautzer.tommie@example.net','803.367.7912x275','2013-07-23 02:11:53','2020-02-24 21:18:01'),(92,'Arlie','Kub','nona.ankunding@example.org','1-815-778-9432x6300','2012-02-19 19:15:15','2020-02-14 01:44:13'),(93,'Benjamin','Sipes','lschuster@example.net','+42(7)6798028255','2012-02-06 13:07:56','2020-02-08 20:19:44'),(94,'Buford','Daniel','xroberts@example.org','525-753-0630x9503','2011-08-18 10:34:49','2020-02-23 03:54:58'),(95,'Xzavier','Halvorson','thurman.keeling@example.com','478.201.5574x046','2010-04-13 12:43:52','2020-02-22 13:21:10'),(96,'Katelin','Bogisich','goyette.marcella@example.org','925-716-9074x709','2011-08-03 09:22:27','2020-02-26 14:16:05'),(97,'Reymundo','Fisher','becker.violette@example.org','136-104-2898x0381','2011-04-05 13:12:18','2020-02-04 20:40:53'),(98,'Jaylen','Nolan','runolfsson.santino@example.net','(498)793-3191x927','2010-10-05 01:49:48','2020-02-28 19:14:16'),(99,'Krystina','Dicki','alayna.huels@example.com','642-675-5975','2015-10-05 02:05:52','2020-02-06 12:17:17'),(100,'Gerard','Lubowitz','bkuvalis@example.net','+74(7)3223046295','2018-12-29 14:41:59','2020-02-21 21:32:03');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-03-05 12:07:47
